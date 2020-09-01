@@ -1,0 +1,136 @@
+#mainDiv {
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: scroll;
+}
+
+div.scrollmenu {
+    background-color: #ffffff;
+    overflow: auto;
+    width: 100%;
+    margin: 0rem;
+    direction: ltr;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: #143642;
+    direction: rtl;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: #EBE8E8;
+}
+
+#logInDiv {
+    background-color: #ffffff;
+    padding: 0.67rem;
+    height: 88%;
+}
+
+.post {
+    padding: 1rem;
+}
+
+.category {
+    font-size: 15px !important;
+    padding: 0.67rem;
+    float: right;
+}
+
+div {
+    width: 100%;
+}
+
+.post {
+    border: #143642;
+    border-bottom: 0.05rem solid;
+}
+
+#PostName {
+    font-size: 17px !important;
+    font-weight: 500;
+}
+
+#author_info {
+    font-size: 12px !important;
+}
+
+#post_info {
+    vertical-align: middle;
+}
+
+#search {
+    width: 20%;
+}
+
+label {
+    color: #143642;
+    font-size: 15px !important;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+}
+
+form {
+    font-size: 15px !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn {
+    background-color: #ffffff !important;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    display: block;
+    border: #143642;
+    border: 0.05rem solid;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+nav .navbar-nav li a {
+    color: #143642 !important;
+    font-size: 23px !important;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: #143642;
+    border-bottom: 0.05rem solid;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.searchbtn {
+    background-color: #ffffff !important;
+    font-size: 1rem !important;
+    display: block;
+    border: #143642;
+    border: 0.1rem solid;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0.1rem;
+    padding: 0.2rem 0.4rem;
+    margin-top: 0.2rem;
+}
+
+.createbtn {
+  background-color: #ffffff !important;
+  font-size: 1rem !important;
+  display: block;
+  border: #143642;
+  border: 0.1rem solid;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0.2rem 0.4rem;
+  margin-top: 0.2rem;
+  margin-left: auto;
+}

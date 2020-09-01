@@ -1,0 +1,96 @@
+#mainDiv {
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    overflow: scroll;
+}
+
+#postAttributesBar {
+    background-color: #EBE8E8;
+    color: #143642;
+    font-size: 16px !important;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.67rem;
+    margin-bottom: 1%;
+    height: 15%;
+}
+
+#pBarCategories {
+    margin-left: 45%;
+    margin-right: 5%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.secondflex {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: center;
+}
+
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#postDiv {
+    background-color: #143642;
+    padding: 0.7rem;
+    margin-top: 1%;
+    text-align: center;
+    height: 90%;
+}
+
+#postBox {
+    margin-top: 3%
+}
+
+#buttons {
+    margin-top: 2%;
+}
+
+p {
+    padding: 0.7rem;
+}
+
+.btn {
+    background-color: #ffffff !important;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    display: block;
+    border: #143642;
+    border: 0.05rem solid;
+    padding: 0.75rem 1.5rem;
+}
+
+.titlebtn {
+    background-color: #ffffff !important;
+    font-size: 16px !important;
+    display: block;
+    border: #143642;
+    border: 0.05rem solid;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    margin-top: 0.2rem;
+}
+
+nav .navbar-nav li a {
+    color: #143642 !important;
+    font-size: 23px !important;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: #143642;
+    border-bottom: 0.05rem solid;
+}

@@ -1,0 +1,80 @@
+#mainDiv {
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    overflow: scroll;
+}
+
+#bigMainMessage {
+    color: #ffffff !important;
+    font-size: 40px !important;
+    font-family: 'Open Sans', sans-serif;
+    font-display: bold;
+}
+
+#signUpDiv {
+    background-color: #143642;
+    padding: 0.5rem;
+    margin-top: 1%;
+    text-align: center;
+    height: 87%;
+}
+
+#messageSignUpDiv {
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-top: 1%;
+}
+
+p {
+    padding: 0.5rem;
+    display: inline-block;
+    color: #ffffff;
+}
+
+form {
+    font-size: 15px !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+label {
+    color: #ffffff;
+    font-size: 15px !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+small {
+    color: #ffffff;
+    font-size: 15px !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn {
+    background-color: #ffffff !important;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    display: block;
+    border: #143642;
+    border: 0.05rem solid;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+nav .navbar-nav li a {
+    color: #143642 !important;
+    font-size: 23px !important;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: #143642;
+    border-bottom: 0.05rem solid;
+}
+
+.mainbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}

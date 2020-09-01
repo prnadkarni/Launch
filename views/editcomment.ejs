@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Create Comment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/postpage.css">
+</head>
+
+<body>
+    <div class="col-lg-12" id=mainDiv>
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+          <a class="navbar-brand" href="/home"><img src="placeholder_logo.png" width="60" height="60" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                  <% if (!currentUser){ %>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/forums">Forums</a>
+					</li>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/about-us">About Us</a>
+					</li>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/log-in">Sign In</a>
+					</li>
+					<li class="nav-item active navbar-right">
+						<a class="nav-link" href="/sign-up">Sign Up</a>
+					</li>
+				<% } else { %>
+					<li class="nav-item navbar-right">
+                        <a class="nav-link" href="/forums">Forums</a>
+                    </li>
+                    <li class="nav-item navbar-right">
+                        <a class="nav-link" href="/about-us">About Us</a>
+                    </li>
+				  	<li class="nav-item navbar-right">
+                        <a class="nav-link" href="/log-out">Log Out</a>
+                    <li class="nav-item navbar-right">
+                        <a class="navbar-link" href="/user"><img src="<%= currentUser.image %>" width="30" height="30" alt=""></a>
+                    </li>
+				<% } %>
+              </ul>
+          </div>
+      </nav>
+
+        <div class="flex-container" id=postAttributesBar>
+            <div class="col-lg-3">
+              <label for="title" name="name"><%= post.name %></label>
+            </div>
+            <div class="secondflex">
+              <div class="col-lg-3" id=pBarCategories>
+                <label for="category" name="category"><%= post.category %></label>
+              </div>
+              <div class="col-lg-3" id="pBarCategories">
+                <label for="subcategory" name="subcategory"><%= post.subcategory %></label>
+              </div>
+            </div>
+        </div>
+
+        <div id=postDiv>
+          <form action="/forums/<%= post._id %>/comment/<%= comment._id %>?_method=PUT" method="post">
+            <textarea readonly id=postBox class="form-control" rows="15" placeholder="<%= post.body %>"></textarea>
+            <div id=commentsDiv>
+              <label for="comments">Comment</label>
+              <div class="col-lg-12">
+                <div>
+                  <input id=postBox class="form-control" name="body" value="<%= comment.body %>" required></textarea>
+                  <div id=buttons>
+                    <input class="col-lg-3 btn btn-light" type="submit" value="Submit Edit">
+					<a class="col-lg-3 btn btn-light" href="/forums/<%= post._id %>" role="button">Cancel</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

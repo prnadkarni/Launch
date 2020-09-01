@@ -1,0 +1,93 @@
+#mainDiv {
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: scroll;
+}
+
+#postAttributesBar {
+    background-color: #EBE8E8;
+    color: #143642;
+    font-size: 16px !important;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.67rem;
+    margin-bottom: 1%;
+    height: 12%;
+}
+
+#pBarCategories {
+    text-align: left;
+    margin-right: 0.5rem;
+    padding: 1.5rem;
+}
+
+#postDiv {
+    background-color: #143642;
+    padding: 0.5rem;
+    margin-top: 1%;
+    height: 86%%;
+}
+
+#postBox {
+    margin-top: 3%;
+}
+
+#buttons {
+    margin-top: 2%;
+}
+
+#commentsDiv {
+    text-align: left;
+    margin-top: 5%;
+    color: #ffffff;
+    background-color: #143642;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.5rem;
+}
+
+.bar {
+    border: #143642;
+    border-bottom: 0.05rem solid;
+    padding: 1rem;
+}
+
+p {
+    padding: 0.75rem;
+}
+
+.btn {
+    background-color: #ffffff !important;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    display: block;
+    border: #143642;
+    border: 0.05rem solid;
+    padding: 0.75rem 1.5rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.secondflex {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: center;
+}
+
+nav .navbar-nav li a {
+    color: #143642 !important;
+    font-size: 23px !important;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: #143642;
+    border-bottom: 0.05rem solid;
+}

@@ -1,0 +1,118 @@
+#mainDiv {
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    overflow: scroll;
+}
+
+#profileDiv {
+    background-color: #ffffff;
+    padding: 0.5rem;
+    height: 88%;
+}
+
+#username {
+    font-size: 35rem;
+}
+
+#posts {
+    padding: 0.5rem;
+    padding-top: 1rem;
+    border: #143642;
+    border-bottom: 0.05rem strong;
+}
+
+#change_user {
+    font-size: 15px !important;
+    border-bottom: transparent;
+}
+
+#change_pass {
+    font-size: 15px !important;
+    border-bottom: transparent;
+}
+
+#logout {
+    font-size: 15px !important;
+    border-bottom: transparent;
+}
+
+.post {
+    padding: 1rem;
+    border: #143642;
+    border-bottom: 0.05rem solid;
+}
+
+.category {
+    font-size: 15px !important;
+    padding: 0.67rem;
+    float: right;
+}
+
+div {
+    width: 100%;
+}
+
+#PostName {
+    font-size: 17px !important;
+    font-weight: 500;
+}
+
+#author_info {
+    font-size: 12px !important;
+}
+
+#post_info {
+    vertical-align: middle;
+}
+
+#search {
+    width: 20%;
+}
+
+label {
+    color: #143642;
+    font-size: 15px !important;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+}
+
+form {
+    font-size: 15px !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn {
+    background-color: #ffffff !important;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    display: block;
+    border: #143642;
+    border: 0.05rem solid;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.signoutbtn {
+    background-color: #ffffff !important;
+    font-size: 1rem !important;
+    display: block;
+    border: #143642;
+    border: 0.1rem solid;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0.1rem;
+    padding: 0.2rem 0.4rem;
+    margin-top: 0.2rem;
+}
+
+nav .navbar-nav li a {
+    color: #143642 !important;
+    font-size: 23px !important;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: #143642;
+    border-bottom: 0.05rem solid;
+}

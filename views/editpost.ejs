@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/createpost.css">
+</head>
+
+<body>
+    <div id=mainDiv>
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand" href="/"><img src="placeholder_logo.png" width="60" height="60" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <% if (!currentUser){ %>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/forums">Forums</a>
+					</li>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/about-us">About Us</a>
+					</li>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/log-in">Sign In</a>
+					</li>
+					<li class="nav-item active navbar-right">
+						<a class="nav-link" href="/sign-up">Sign Up</a>
+					</li>
+				<% } else { %>
+					<li class="nav-item navbar-right">
+                        <a class="nav-link" href="/forums">Forums</a>
+                    </li>
+                    <li class="nav-item navbar-right">
+                        <a class="nav-link" href="/about-us">About Us</a>
+                    </li>
+					<li class="nav-item navbar-right">
+                        <a class="nav-link" href="/log-out">Log Out</a>
+                    <li class="nav-item navbar-right">
+                        <a class="navbar-link" href="/user"><img src="<%= currentUser.image %>" width="30" height="30" alt=""></a>
+                    </li>
+				<% } %>
+            </ul>
+        </div>
+    </nav>
+
+        <div class="flex-container" id=postAttributesBar>
+		<form class="/editpost" action="/forums/<%= post._id %>?_method=PUT" method="post">
+            <div class="col-xs-3 form-group">
+              <label for="post-title">Post Name</label>
+              <input type="title" class="form-control" name="name" id="inputTitle" value="<%= post.name %>" required>
+            </div>
+          
+          <div class="col-xs-3" id=pBarCategories>
+            <label for="category">Category</label>
+            <select class="form-control" name="category">
+				<option value="<%= post.category._id %>" selected="selected"><%= post.category %></option>
+				<% if (category._id !== post.category._id){ %>
+					<% categories.forEach(function(category){ %>
+					  <option value="<%= category._id %>"><%= category.name %></option>
+					<% }) %>
+				<% } %>
+            </select>
+          </div>
+          <div class="col-xs-3">
+            <label for="category">Sub-Category </label>
+            <select class="form-control"  name="subcategory">
+				<option value="<%= post.subcategory._id %>" selected="selected"><%= post.subcategory %></option>
+				<% if (subcategory._id !== post.subcategory._id) { %>
+              		<% subcategories.forEach(function(subcategory){ %>
+				  		<option value="<%= subcategory._id %>"><%= subcategory.name %></option>
+				  	<% }) %>
+				<% } %>
+            </select>
+          </div>
+        </div>
+
+        <div id=postDiv>
+            <input id=postBox class="form-control" name="body" value="<%= post.body %>" required>
+            <div class="row" id=buttons>
+              <input class="col-lg-3 btn btn-light" type="submit" value="Submit">
+              <a class="col-lg-3 btn btn-light" href="/forums/<%= post._id %>" role="button">Cancel</a>
+            </div>
+        </div>
+	</form>
+    </div>
+</body>
+
+</html>

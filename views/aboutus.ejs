@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<title>About Us | Jobs Website</title>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/aboutus.css">
+</head>
+
+</body>
+<div id=mainDiv>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand" href="/home"><img src="placeholder_logo.png" width="60" height="60" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <% if (!currentUser){ %>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/forums">Forums</a>
+					</li>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/about-us">About Us</a>
+					</li>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/log-in">Sign In</a>
+					</li>
+					<li class="nav-item active navbar-right">
+						<a class="nav-link" href="/sign-up">Sign Up</a>
+					</li>
+				<% } else { %>
+					<li class="nav-item navbar-right">
+                        <a class="nav-link" href="/forums">Forums</a>
+                    </li>
+                    <li class="nav-item navbar-right">
+                        <a class="nav-link" href="/about-us">About Us</a>
+                    </li>
+					<li class="nav-item navbar-right">
+                        <a class="nav-link" href="/log-out">Log Out</a>
+                    </li>
+                    <li class="nav-item navbar-right">
+                        <a class="navbar-link" href="/user"><img src="<%= currentUser.image %>" width="30" height="30" alt=""></a>
+                    </li>
+				<% } %>
+
+            </ul>
+        </div>
+    </nav>
+    <span id="aboutus_span">
+        <div class="box row">
+            <div class="col-sm-6">
+                <div class="jumbotron" id="AboutUs">
+                    <h1 class="display-4">Welcome to Jobs Website!</h1>
+                    <p class="lead">We shall put our description here of our goals as a website.</p>
+                    <hr class="my-4">
+					<a href="/sign-up"><button type="button" class="btn btn-light">Sign Up</button></a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="jumbotron" id="Mission">
+                    <h1 class="display-4">Our Mission</h1>
+                    <p class="lead">Description of what users can do with our website.</p>
+                </div>
+            </div>
+        </div>
+    </span>
+
+</div>
+
+</html>

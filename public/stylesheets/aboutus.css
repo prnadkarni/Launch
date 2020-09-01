@@ -1,0 +1,77 @@
+#mainDiv {
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: scroll;
+}
+
+#postsDiv {
+    height: 100vh;
+    background-color: #143642;
+}
+
+#bigMainMessage {
+    color: #143642 !important;
+    font-size: 50px !important;
+    font-family: 'Open Sans', sans-serif;
+    font-display: bold;
+}
+
+#smallMainMessage {
+    color: #143642 !important;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#messageDiv {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-top: 1rem;
+    padding: 0.2rem;
+}
+
+p {
+    padding: 0.2px;
+    color: #143642;
+}
+
+h1 {
+    color: #143642;
+}
+
+.btn {
+    background-color: #ffffff !important;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    display: block;
+    border: #143642;
+    border: 0.1rem solid;
+    padding: 0.75rem 1.5rem;
+}
+
+nav .navbar-nav li a {
+    color: #143642 !important;
+    font-size: 23px !important;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: #143642;
+    border-bottom: 0.05rem solid;
+}
+
+.jumbotron {
+    background: #ffffff;
+    width: 80%;
+    margin-left: 5rem;
+    margin-top: 4rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#aboutus_span {}

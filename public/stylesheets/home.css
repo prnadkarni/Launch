@@ -1,0 +1,91 @@
+#mainDiv {
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: scroll;
+}
+
+#postsDiv {
+    height: 100vh;
+    background-color: #143642;
+}
+
+#bigMainMessage {
+    color: #143642 !important;
+    font-size: 50px !important;
+    font-family: 'Open Sans', sans-serif;
+    font-display: bold;
+}
+
+#smallMainMessage {
+    color: #143642 !important;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#messageDiv {
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-top: 2.5rem;
+    padding: 0.5rem;
+}
+
+#author_info {
+    font-size: 12px !important;
+}
+
+#post_info {
+    vertical-align: middle;
+}
+
+.post {
+    border: #143642;
+    border-bottom: 0.05rem solid;
+    padding: 1rem;
+}
+
+.category {
+    font-size: 15px !important;
+    padding: 0.67rem;
+    float: right;
+}
+
+#topPosts {
+    background-color: #143642 !important;
+    height: 20%;
+    font-size: 16px !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    padding: 0.67rem;
+}
+
+.btn {
+    background-color: #ffffff !important;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    display: block;
+    border: #143642;
+    border: 0.05rem solid;
+    padding: 0.75rem 1.5rem;
+}
+
+nav .navbar-nav li a {
+    color: #143642 !important;
+    font-size: 23px !important;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: #143642;
+    border-bottom: 0.05rem solid;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

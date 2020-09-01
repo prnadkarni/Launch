@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>Forums | Jobs Website</title>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/forums.css">
+</head>
+
+<body>
+    <div id=mainDiv>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-brand" href="/"><img src="placeholder_logo.png" width="60" height="60" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <% if (!currentUser){ %>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/forums">Forums</a>
+					</li>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/about-us">About Us</a>
+					</li>
+					<li class="nav-item navbar-right">
+						<a class="nav-link" href="/log-in">Sign In</a>
+					</li>
+					<li class="nav-item active navbar-right">
+						<a class="nav-link" href="/sign-up">Sign Up</a>
+					</li>
+				<% } else { %>
+					<li class="nav-item navbar-right">
+                        <a class="nav-link" href="/forums">Forums</a>
+                    </li>
+                    <li class="nav-item navbar-right">
+                        <a class="nav-link" href="/about-us">About Us</a>
+                    </li>
+					<li class="nav-item navbar-right">
+                        <a class="nav-link" href="/log-out">Log Out</a>
+                    <li class="nav-item navbar-right">
+                        <a class="navbar-link" href="/user"><img src="<%= currentUser.image %>" width="30" height="30" alt=""></a>
+                    </li>
+				<% } %>
+
+                </ul>
+            </div>
+        </nav>
+		<h2>
+			<%= category.name %>
+		</h2>
+        <div id="logInDiv">
+			<% category.subcategories.forEach(function(subcategory){ %>
+            <div class="scrollmenu">  
+				<a href="/forums/categories/<%= category._id %>/<%= subcategory._id %>"><%= subcategory.name %></a>         
+            </div>
+			<% }) %>
+			<% if (!currentUser){ %>
+				<div class="flexbox">
+					<form action="/forums/categories/<%= category._id %>" method="GET" class="form-inline" id="post-search">
+						<div class="form-group">
+							<input name="search" type="text" class="form-control" id="search" placeholder="Search">
+						  	<input type="submit" value="Search" class="searchbtn btn-light">
+						</div>
+				  </form>
+				</div>
+			<% } else { %>
+				<div class="flexbox">
+				  <form action="/forums/categories/<%= category._id %>" method="GET" class="form-inline" id="post-search">
+						<div class="form-group">
+							<input name="query" type="text" class="form-control" id="search" placeholder="Search">
+						  <button type="button" class="searchbtn btn-light">Search</button>
+						</div>
+				  </form>
+					<a href="/forums/new"><button type="button" class="createbtn btn-light">Create Post</button></a>
+				</div>
+			<% } %>
+			<div class="col-md-12">
+				<% if (noMatch !== null) { %>
+				<h3>
+					<%= noMatch %>
+				</h3>
+				<% } %>
+			</div>
+            <!-- input type="search" class="form-control" id="search" placeholder="Search"-->
+            <% posts.forEach(function(post){ %>
+            <ul class="list-group" id="post_group">
+                <li class="post ">
+                    <div id="post_info">
+                        <div>
+                            <a href="/forums/<%= post._id %>"><label for="post_name" id="PostName"><%= post.name %></label></a>
+                            <span>
+                                <label for="post_category" class="category"><%= post.category %></label>
+                                <label for="post_subcategory" class="category"><%= post.subcategory %></label>
+                            </span>
+                        </div>
+                        <img src="placeholder_logo.png" width="20" height="20" alt="">
+                        <label for="post_author" id="author_info"><%= post.author.username %> on <%= post.date.toDateString() %></label>
+
+                </li>
+            </ul>
+            <% }) %>
+            </div>
+        </div>
+</body>
+
+</html>
